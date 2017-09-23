@@ -4,7 +4,10 @@ node_js: stable
 # S: Build Lifecycle
 install:
   - npm install
-
+  
+cache:
+  directories:
+    - node_modules
 
 #before_script:
  # - npm install -g gulp
@@ -13,7 +16,6 @@ script:
   - hexo g
 
 after_script:
-  - cd ./public
   - git init
   - git config user.name "Donny"
   - git config user.email "donnymoving@gmail.com"
