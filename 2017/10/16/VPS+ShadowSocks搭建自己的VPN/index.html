@@ -6,17 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.aboysblog.com">
-  <title>Archives: 2017 | 马东东的博客</title>
+  <title>VPS+ShadowSocks搭建自己的VPN | 马东东的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一只苟且偷安的程序猿，云隐西安，擅长Java，热爱开源技术。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="马东东的博客">
-<meta property="og:url" content="http://www.aboysblog.com/archives/2017/index.html">
+  <meta name="description" content="据报导，自7月1日起，中国的 Android 和苹果应用商店将不再允许 VPN 应用下载，以阻止中国网民绕过“网络防火墙”（GFW）浏览墙外内容,墙越来越高了。VPN 供应商 Green 已于6月22日发布公告，证实自7月1日起停止服务。此外，Netfits、VPN Master Pro、Ponhon、Snap VPN 和 SkyX 等 VPN 供应商在过去几个月里，也或被迫停止服务，或从应用商店">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VPS+ShadowSocks搭建自己的VPN">
+<meta property="og:url" content="http://www.aboysblog.com/2017/10/16/VPS+ShadowSocks搭建自己的VPN/index.html">
 <meta property="og:site_name" content="马东东的博客">
-<meta property="og:description" content="一只苟且偷安的程序猿，云隐西安，擅长Java，热爱开源技术。">
+<meta property="og:description" content="据报导，自7月1日起，中国的 Android 和苹果应用商店将不再允许 VPN 应用下载，以阻止中国网民绕过“网络防火墙”（GFW）浏览墙外内容,墙越来越高了。VPN 供应商 Green 已于6月22日发布公告，证实自7月1日起停止服务。此外，Netfits、VPN Master Pro、Ponhon、Snap VPN 和 SkyX 等 VPN 供应商在过去几个月里，也或被迫停止服务，或从应用商店">
+<meta property="og:image" content="http://www.madongdong.me/wp-content/uploads/2017/09/2017090316350268.jpg">
+<meta property="og:updated_time" content="2017-10-16T14:29:16.050Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马东东的博客">
-<meta name="twitter:description" content="一只苟且偷安的程序猿，云隐西安，擅长Java，热爱开源技术。">
+<meta name="twitter:title" content="VPS+ShadowSocks搭建自己的VPN">
+<meta name="twitter:description" content="据报导，自7月1日起，中国的 Android 和苹果应用商店将不再允许 VPN 应用下载，以阻止中国网民绕过“网络防火墙”（GFW）浏览墙外内容,墙越来越高了。VPN 供应商 Green 已于6月22日发布公告，证实自7月1日起停止服务。此外，Netfits、VPN Master Pro、Ponhon、Snap VPN 和 SkyX 等 VPN 供应商在过去几个月里，也或被迫停止服务，或从应用商店">
+<meta name="twitter:image" content="http://www.madongdong.me/wp-content/uploads/2017/09/2017090316350268.jpg">
   
     <link rel="alternative" href="/atom.xml" title="马东东的博客" type="application/atom+xml">
   
@@ -172,76 +175,175 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-VPS+ShadowSocks搭建自己的VPN" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      VPS+ShadowSocks搭建自己的VPN
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/16/VPS+ShadowSocks搭建自己的VPN/" class="archive-article-date">
+
+        
+        <a href="/2017/10/16/VPS+ShadowSocks搭建自己的VPN/" class="archive-article-date">
   	<time datetime="2017-10-16T14:44:35.075Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-16</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/16/VPS+ShadowSocks搭建自己的VPN/">VPS+ShadowSocks搭建自己的VPN</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>据报导，自7月1日起，中国的 Android 和苹果应用商店将不再允许 VPN 应用下载，以阻止中国网民绕过“网络防火墙”（GFW）浏览墙外内容,墙越来越高了。VPN 供应商 Green 已于6月22日发布公告，证实自7月1日起停止服务。此外，Netfits、VPN Master Pro、Ponhon、Snap VPN 和 SkyX 等 VPN 供应商在过去几个月里，也或被迫停止服务，或从应用商店消失。
 
-        <div class="article-info info-on-right">
-          
-          
+之前一直在用GreenVPN，感觉很好用，后来停止服务了。不过，想翻墙还是有办法的，比如本文要介绍的shadowsocks。shadowsocks是一款自定义协议的代理软件，由于其流量特征不明显，不太容易用技术手段拦截。虽然作者[@clowwindy](https://twitter.com/clowwindy?utm_source=textarea.com&amp;utm_medium=textarea.com&amp;utm_campaign=article)两年前就被有司请喝茶了，shadowsocks却一直运转良好没有被彻底封杀过。
+</code></pre><p>自己搭建VPN还可以多人一起使用。搭建VPN常见的组合就是VPS+ShadowSocks+加速。</p>
+<h2 id="简单介绍一下shadowsocks翻墙的原理"><a href="#简单介绍一下shadowsocks翻墙的原理" class="headerlink" title="简单介绍一下shadowsocks翻墙的原理"></a>简单介绍一下shadowsocks翻墙的原理</h2><pre><code>shadowsocks客户端启动后会在本地开启一个代理，可以理解为一个数据的出入口。用户想通过shadowsocks访问墙外网站的请求都要经过这个本地代理。
 
+通过shadowsocks翻墙上网的过程是这样的：
+
+1、用户发起一个网络访问请求，比如用浏览器访问google.com，请求被发送到本地代理。
+
+2、客户端从本地代理拿到请求数据，然后发送至墙外的shadowsocks服务端。
+
+3、服务端向google.com发起请求，然后收到google的响应数据，也就是google首页的数据。
+
+4、服务端把响应数据发回客户端。
+
+5、客户端再通过本地代理把响应数据交给浏览器，google首页就显示出来了。
+
+整个过程中的第2步和第4步都是通过shadowsocks自定义的协议隐蔽地进行，很难被过滤，所以我们才能一直用它顺畅地翻墙。
+</code></pre><p><img src="http://www.madongdong.me/wp-content/uploads/2017/09/2017090316350268.jpg" alt="shadowsocks" title="shadowsocks"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.aboysblog.com/2017/10/16/VPS+ShadowSocks搭建自己的VPN/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/20/hello-world/" class="archive-article-date">
-  	<time datetime="2017-09-20T15:57:30.080Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-20</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/20/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/20/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -264,8 +366,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
