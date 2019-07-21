@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.aboysblog.com/"/>
-  <updated>2018-04-06T14:45:31.122Z</updated>
+  <updated>2019-07-21T10:17:14.327Z</updated>
   <id>http://www.aboysblog.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型</title>
+    <link href="http://www.aboysblog.com/2019/07/21/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%B3%BB%E5%88%97%EF%BC%9ANIO%E3%80%81BIO%E3%80%81AIO%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%8C%E5%8F%8ANIO%E7%9A%84%E5%BA%94%E7%94%A8%E5%92%8C%E6%A1%86%E6%9E%B6%E9%80%89%E5%9E%8B/"/>
+    <id>http://www.aboysblog.com/2019/07/21/高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型/</id>
+    <published>2019-07-21T10:14:03.807Z</published>
+    <updated>2019-07-21T10:17:14.327Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>谈到并发编程就不得不提到NIO，以及相关的Java NIO框架Netty等，并且在很d多面试中也经常提到NIO和AIO、同步和异步、阻塞和非阻塞等的区别。我先简短介绍下几个NIO相关的概念，然后再谈NIO重点掌握内容，以及Java NIO框架选型。</code></pre><h2 id="AIO、BIO、NIO的区别"><a href="#AIO、BIO、NIO的区别" class="headerlink" title="AIO、BIO、NIO的区别"></a>AIO、BIO、NIO的区别</h2><pre><code>IO模型主要分类：+ 同步(synchronous) IO和异步(asynchronous) IO+ 阻塞(blocking) IO和非阻塞(non-blocking)IO+ 同步阻塞(blocking-IO)简称BIO+ 同步非阻塞(non-blocking-IO)简称NIO+ 异步非阻塞(synchronous-non-blocking-IO)简称AIO</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;谈到并发编程就不得不提到NIO，以及相关的Java NIO框架Netty等，并且在很d多面试中也经常提到NIO和AIO、同步和异步、阻塞和非阻塞等的区别。我先简短介绍下几个NIO相关的概念，然后再谈NIO重点掌握内容，以及Java NIO框架选型。
+&lt;/co
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hexo + GitHub Pages搭建博客</title>

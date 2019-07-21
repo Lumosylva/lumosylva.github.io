@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.aboysblog.com">
-  <title>Archives | 马东东的博客</title>
+  <title>高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型 | 马东东的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一只苟且偷安的程序猿，云隐西安，擅长Java，热爱开源技术。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="马东东的博客">
-<meta property="og:url" content="http://www.aboysblog.com/archives/index.html">
+  <meta name="description" content="谈到并发编程就不得不提到NIO，以及相关的Java NIO框架Netty等，并且在很d多面试中也经常提到NIO和AIO、同步和异步、阻塞和非阻塞等的区别。我先简短介绍下几个NIO相关的概念，然后再谈NIO重点掌握内容，以及Java NIO框架选型。 AIO、BIO、NIO的区别IO模型主要分类：  + 同步(synchronous) IO和异步(asynchronous) IO + 阻塞(bloc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型">
+<meta property="og:url" content="http://www.aboysblog.com/2019/07/21/高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型/index.html">
 <meta property="og:site_name" content="马东东的博客">
-<meta property="og:description" content="一只苟且偷安的程序猿，云隐西安，擅长Java，热爱开源技术。">
+<meta property="og:description" content="谈到并发编程就不得不提到NIO，以及相关的Java NIO框架Netty等，并且在很d多面试中也经常提到NIO和AIO、同步和异步、阻塞和非阻塞等的区别。我先简短介绍下几个NIO相关的概念，然后再谈NIO重点掌握内容，以及Java NIO框架选型。 AIO、BIO、NIO的区别IO模型主要分类：  + 同步(synchronous) IO和异步(asynchronous) IO + 阻塞(bloc">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-21T10:17:14.327Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马东东的博客">
-<meta name="twitter:description" content="一只苟且偷安的程序猿，云隐西安，擅长Java，热爱开源技术。">
+<meta name="twitter:title" content="高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型">
+<meta name="twitter:description" content="谈到并发编程就不得不提到NIO，以及相关的Java NIO框架Netty等，并且在很d多面试中也经常提到NIO和AIO、同步和异步、阻塞和非阻塞等的区别。我先简短介绍下几个NIO相关的概念，然后再谈NIO重点掌握内容，以及Java NIO框架选型。 AIO、BIO、NIO的区别IO模型主要分类：  + 同步(synchronous) IO和异步(asynchronous) IO + 阻塞(bloc">
   
     <link rel="alternative" href="/atom.xml" title="马东东的博客" type="application/atom+xml">
   
@@ -173,113 +174,163 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/21/高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型/" class="archive-article-date">
+
+        
+        <a href="/2019/07/21/高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型/" class="archive-article-date">
   	<time datetime="2019-07-21T10:14:03.807Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-21</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/21/高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型/">高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>谈到并发编程就不得不提到NIO，以及相关的Java NIO框架Netty等，并且在很d多面试中也经常提到NIO和AIO、同步和异步、阻塞和非阻塞等的区别。我先简短介绍下几个NIO相关的概念，然后再谈NIO重点掌握内容，以及Java NIO框架选型。
+</code></pre><h2 id="AIO、BIO、NIO的区别"><a href="#AIO、BIO、NIO的区别" class="headerlink" title="AIO、BIO、NIO的区别"></a>AIO、BIO、NIO的区别</h2><pre><code>IO模型主要分类：
 
-        <div class="article-info info-on-right">
-          
-          
++ 同步(synchronous) IO和异步(asynchronous) IO
++ 阻塞(blocking) IO和非阻塞(non-blocking)IO
++ 同步阻塞(blocking-IO)简称BIO
++ 同步非阻塞(non-blocking-IO)简称NIO
++ 异步非阻塞(synchronous-non-blocking-IO)简称AIO
+</code></pre>
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD6UlEQVR42u3aSW5iQRAFQO5/aXrbrQb8XmaV7UX8FcJQQ8hSksPjET/Pv5537797/v/85+8+Rs//K2xWw4EDBw4cG47kMvmF82t/3uvzafMd6/PjwIEDB45DHMkGeWz6/H4S6fIg+nnf/I44cODAgeOnOM5mjbOVPyeH+Wo4cODAgeP3cGwKgrNAuwmiOHDgwIHj+znygt0mNCYJXtLiaptYV2qlOHDgwIFjMTOwofkNr6/Md+DAgQMHjqBd1CZmSbiarZAXBzdjfP98FwcOHDhwrDnagl2ebuWHzvdt20vtvXDgwIEDx/dwtKW0dhg6KfPtA+owW8WBAwcOHGuOtu3UpmqzdtFsAKJNAnHgwIEDx54jScDyzfJ0a1ZqzENs2zbDgQMHDhy3OfYB71Q5ry07tm2wF784cODAgQPHmqMIRXHA24fDPPDPkjocOHDgwHGDI2nbzLozyV/bVtMsPat/OuDAgQMHjgXHbEiubU0lYXgzDNGi48CBAweOexz3jp5zRzMXo3LksICIAwcOHDgWHHlalZTezraO8h3bHwpvi4Y4cODAgWPN0X5tU1LcrJmcMy81FtktDhw4cOAYcdxr+eTXy3ecJXjJcAMOHDhw4NhzFFMPo8A5e9qAvdn97f8FDhw4cOAYceQBaTOOdmP9TSLXC+HAgQMHjglHO1i2KQLOrp0E1LYU+AILBw4cOHAc5dgHwrZ4lwfCZ/C06+PAgQMHjrMcs+JgPnBWp0+joLspC+LAgQMHjhscyZXyd2bR/sboW37Ox2wJHDhw4MDx5oRJgEwSpPbzp9LFtuD4xWo4cODAgWPBMQt4+bDCpo1U1zjXKDhw4MCBY88xK6WdCrdJ2TEPxu34xQoFBw4cOHAEOUueRA3nJuKwNxuGS1i/2BEHDhw4cKw58gLcqY3bQYQZ36rUiAMHDhw4FhzP+JmV//IL502ps60yHDhw4MBxgyMJq226NRxTWze0Nk0pHDhw4MBxluNGwe7UagncrCD4olaKAwcOHDjWHJvK4r6AmIfMWXvsQEaLAwcOHDhG1bBT43F5uTAJ83kxMQ/wb0+OAwcOHDjWHKfG2toi4yN42sA/G5Ko/wtw4MCBA8fHMzzLpw2KN65x7/M4cODAgWPPkT9JMJ4NSbSNqzaNnK2PAwcOHDg262+aOvmoQdsEakuExwItDhw4cOA4xJGnXm1itkmi8lA6WxkHDhw4cPwejnYood1lNmB3oKCJAwcOHDh+iGPWrMqv1CaZs5O/+AwOHDhw4DjEkRQHk0CYh8xN+pcXK/OBPxw4cODAcYqjLaVtGlSb5Ko9enK2YZERBw4cOHC8fv0HqISa3TNvvq0AAAAASUVORK5CYII=" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/06/Hexo + GitHub Pages搭建博客/" class="archive-article-date">
-  	<time datetime="2018-04-06T14:44:57.554Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-06</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/06/Hexo + GitHub Pages搭建博客/">Hexo + GitHub Pages搭建博客</a>
-    </h1>
+  
+    <a href="/2018/04/06/Hexo + GitHub Pages搭建博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo + GitHub Pages搭建博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/06/VPS+ShadowSocks搭建自己的VPN/" class="archive-article-date">
-  	<time datetime="2018-04-06T12:31:46.221Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/06/VPS+ShadowSocks搭建自己的VPN/">VPS+ShadowSocks搭建自己的VPN</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -302,8 +353,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
