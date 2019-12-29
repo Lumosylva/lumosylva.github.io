@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="https://www.aboysblog.com">
+  <link rel="dns-prefetch" href="mdd1991.github.io">
   <title>高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型 | 马东东的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="谈到并发编程就不得不提到NIO，以及相关的Java NIO框架Netty等，并且在很d多面试中也经常提到NIO和AIO、同步和异步、阻塞和非阻塞等的区别。我先简短介绍下几个NIO相关的概念，然后再谈NIO重点掌握内容，以及Java NIO框架选型。 AIO、BIO、NIO的区别IO模型主要分类：  + 同步(synchronous) IO和异步(asynchronous) IO + 阻塞(bloc">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型">
-<meta property="og:url" content="https://www.aboysblog.com/2019/07/21/高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型/index.html">
+<meta property="og:url" content="mdd1991.github.io/2019/07/21/高并发编程系列：NIO、BIO、AIO的区别，及NIO的应用和框架选型/index.html">
 <meta property="og:site_name" content="马东东的博客">
 <meta property="og:description" content="谈到并发编程就不得不提到NIO，以及相关的Java NIO框架Netty等，并且在很d多面试中也经常提到NIO和AIO、同步和异步、阻塞和非阻塞等的区别。我先简短介绍下几个NIO相关的概念，然后再谈NIO重点掌握内容，以及Java NIO框架选型。 AIO、BIO、NIO的区别IO模型主要分类：  + 同步(synchronous) IO和异步(asynchronous) IO + 阻塞(bloc">
 <meta property="og:locale" content="zh-CN">
@@ -291,7 +291,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD8UlEQVR42u3aS27jQAwFQN//0pltgMTye2TLzgClVeDIUnf1gubn8Yivr2/Xz0+ur/b+Z0/I1/P9k8cdFw4cOHDgiLc620zytPy919tOvrtZPw4cOHDgOMXxbLnXy5qFwOuN5YE5X22yRxw4cODA8VmOZFnR6+N063p7CRAOHDhw4PjLHLNlzQqRswPAgQMHDhyf5UjKbW0jqi3wnUrt3lQrxYEDBw4caX2vSJ/+l79vme/AgQMHDhzxSMFscC0JyUlgbltZxwbycODAgQPHmiNv/7ebbNtOs6Lh7G8cOHDgwHE3R/619gV5ufDU/W2z6unx4MCBAweOEUfR5i+H1doi3abRNavy/fIEHDhw4MBxiCMJVLNhuLYUmI9B7FtoxWQHDhw4cOAYcbRDDG0SNStEbpph9fHgwIEDB47bOPYBMg/D+0A+rIb+vAcHDhw4cKw52i0lobct0rUlvE3IL7hx4MCBA8dRjjaY7YfkhuFwXaCMAi0OHDhw4Ig58sDZciRJYDset0nMoiQTBw4cOHCsOZLEpk3MZkvMxyw2Jb9iGAIHDhw4cNzAkdyfF+PyFlH+tFkpM9ovDhw4cOAYcewbRZty3mwkIm9Q1ffjwIEDB441R9s6mo0UtCE8L1bOfiK8+BYOHDhw4FhwtCEqSZPyol5Ltj+qF+/FgQMHDhxHOTYDCrNBhHbMrm0m1e/CgQMHDhxrjnawoG1HzZ6f0MwGL6L/4sCBAweOBUc7gtaG0v3AxCwODhtdOHDgwIHjEEdbwtskfm1yuCeof3HgwIEDB45DHG0Brt1SHoxbuHyFL7hx4MCBA8chjjwgtSEtKQjOxibylDIBGs534MCBAweOJzualQjzxbXLTQ4gH4Br21E4cODAgWPDMSvA5cNqbbtok0a2TFknCgcOHDhwPKYTbgcGnTctpRnHbCXREeLAgQMHjhFHmyxtSoTvOdt8R788BwcOHDhwHOXYlO3ysYOcuH3OpgWFAwcOHDjOcmzSuRnofgwiv78od+LAgQMHjkMcm/CZ3N+WDpNvtWN20fHgwIEDB45DHHl4a1+cb342Ejcb1Hj6CQ4cOHDgWHPckYYlNEkClnBs3hL9+sCBAwcOHCXHV3m1ITAJeHu4fAjvRWqHAwcOHDjWHJv4nGxjhrXZ2KxYWaPgwIEDB45R82nTdmobP58NtDhw4MCB4w6OdowgnwGYRfhiA6Pr6S5w4MCBA8cbOa6bUnni1AbLdj3J2l6kcDhw4MCB4y0cm9D7tbjyYuLsaY/ZOePAgQMHjkuOvND2OHQlpcN8BCE/htWUBw4cOHDgODQhlreXZsMKm5C/aUe1jS4cOHDgwHG5hn9mJ2g6p/dUVAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD60lEQVR42u3cS27jQAwFwNz/0s7WC8t+j2w5WZRXgdORuksDUPxgfn7iz+Ppc/X982+vfk7+6mp9u8Pkr4YfHDhw4MARXyjZ6NWm8+u/J7u6crKrfOXlKXDgwIEDxyGOq9tf/dyiJNdPgmV7+PyMOHDgwIHjrzhyrBlN/k2+HgcOHDhw/H+Otgg4K9htAjwOHDhw4PhbjqQ4mB+1Tb1mYfsRfG6sleLAgQMHjkU1r20X/befb5nvwIEDBw4co0CVh7o26doEvPZVIDodDhw4cOBYc+QBaXakWdibpYuzQiQOHDhw4LiDIwlO+Zp2TC2hzB/MbFSiTupw4MCBA0cQR9qbtcNzLehmfQv6IqPFgQMHDhwjjtlwQJJEnRpQSN4UNkzDKQ8cOHDgwPF2P23atknnNiMIeZsqfy0o/l3gwIEDB47gRPv0KW8y5XD75lb+UC/nO3DgwIEDx4gjT2zarexBN9/vC4s4cODAgWPDkYS9/LNv/MxAc+4PK3HgwIEDx5pj1vKfBc68UDgb7Gt3iwMHDhw47uBILjQLe3kzKX8wbUEwTy9x4MCBA8dZjk1baDb6MBuJmKWFxaPCgQMHDhwLjtkW9+G2bWidOvyH73HgwIEDxw0csxGBYbI0KlDORiKiU+PAgQMHjjXHqdvPhgySVtC+7Ng+Bhw4cODAseHIy3CzMbj8mvt214EEEgcOHDhwHKrFJUvbRtEmELZp3uH3Dhw4cODAcVsKt1k5A2rTv82xP6zEgQMHDhwjjnZIrg3M7VhbcrX8mu2jwoEDBw4ce4526SYpyst5eRDNhxuGYxA4cODAgaPkmDWH8hTuviGGliy6Gg4cOHDgWHPsW0H5mvZqM+I8F4sSORw4cODAseaYNYryjX5zPC4Pqzhw4MCB4xTHLGhtkrFZGpbfd/UAcODAgQPHmmMTJvON5iGwbWK1a6K74MCBAweOQxz5mnaQLt9WTjYb74v2gwMHDhw4znT5i/9iYLbdWfmvTSPbq0Uzgzhw4MCBI+Zomzqz1k4bFNvDt9dZ3QAHDhw4cCzqYHlwbdO2Nii2hcXkakXahgMHDhw4Yo72AHmbahMCNw/pwF1w4MCBA8fiLo/y0wa2POBtCohtgbIuDuLAgQMHji4bqsuIszQs2XqL274c5PfCgQMHDhybe22Ca451KhBu2lSrXhwOHDhw4Cg58qDYhq7NkEFOtikOvgi0OHDgwIHjixyz5C0fgMjD9uZ14UMXDgcOHDhwfJGjDcZtsS8vL54qLB5478CBAwcOHKM+y+y3CWi+fnjIPPHDgQMHDhxrjlkvJg94m4G8tpXVDmEMy5c4cODAgeP197/ywhVHwIYbiAAAAABJRU5ErkJggg==" alt="微信分享二维码">
     </div>
 </div>
 

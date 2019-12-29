@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="https://www.aboysblog.com">
+  <link rel="dns-prefetch" href="mdd1991.github.io">
   <title>VPS+ShadowSocks搭建自己的VPN | 马东东的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="据报导，自7月1日起，中国的 Android 和苹果应用商店将不再允许 VPN 应用下载，以阻止中国网民绕过“网络防火墙”（GFW）浏览墙外内容,墙越来越高了。VPN 供应商 Green 已于6月22日发布公告，证实自7月1日起停止服务。此外，Netfits、VPN Master Pro、Ponhon、Snap VPN 和 SkyX 等 VPN 供应商在过去几个月里，也或被迫停止服务，或从应用商店">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VPS+ShadowSocks搭建自己的VPN">
-<meta property="og:url" content="https://www.aboysblog.com/2018/04/06/VPS+ShadowSocks搭建自己的VPN/index.html">
+<meta property="og:url" content="mdd1991.github.io/2018/04/06/VPS+ShadowSocks搭建自己的VPN/index.html">
 <meta property="og:site_name" content="马东东的博客">
 <meta property="og:description" content="据报导，自7月1日起，中国的 Android 和苹果应用商店将不再允许 VPN 应用下载，以阻止中国网民绕过“网络防火墙”（GFW）浏览墙外内容,墙越来越高了。VPN 供应商 Green 已于6月22日发布公告，证实自7月1日起停止服务。此外，Netfits、VPN Master Pro、Ponhon、Snap VPN 和 SkyX 等 VPN 供应商在过去几个月里，也或被迫停止服务，或从应用商店">
 <meta property="og:locale" content="zh-CN">
@@ -305,7 +305,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqklEQVR42u3aS04jQRAFQO5/aUaaFRvaL39gpOiVhex2RSF1pl/Wx0d8ff6/vr7+ej2/5/luz/d8/tTahYeHh9da+nfX83Lz9yfbkawwXzMeHh7eNa9aDJJSUS05z+xkO/Dw8PDejVdtbXtlJr8DHh4e3l/k5SFFte3OCwYeHh7eb/GSpnneFudxQ3UrF7IWPDw8vJjXG4D97uvz+R4eHh5ea6pejRJ6JSSPIcqrxcPDwzvgbUWlycGC5O/z0hX9YsDDw8Mb86qB7Na4q1dOmiEvHh4e3jFvEsXmxaN6kCvfJjw8PLyf5PUiiR4mR1bjXTw8PLxrXu/hW44DxiUkad8LYzA8PDy8Fm+3ka1Gt1G9ijfxxXwPDw8Pb5XX+/pkcb1INy8qL/B4eHh4Z7zdoCEZp1UPGeRHGfDw8PCuefnP+7zVniz9ojjh4eHh7fLmkUG+EfPguByO4OHh4f0grzq+Sprp+YirvFl4eHh4x7y8Fb6LX6thx4tmHQ8PD++At/WYvoiAkwY6+pfg4eHhrfLy5eYxQbV1rpaickuNh4eHd8BLllstHpNGOR+PFc6U4eHh4S3xJrFsrwmuPu4XPouHh4e3ykseytVmOo8qtoKPqO7h4eHhLfHyx271QEDyoM/v3Isk8PDw8C54+fiq+sXVkpM38c2UGg8PD++AVz0EMDkOldwt39xvtw8PDw/vgJe0qsntJgcCJkWoHPvi4eHhjXmfxataMEYB63z8hoeHh3fA2/2a3mefA9/ekSw8PDy8a161GMxHU5OgoVqQ8PDw8O54vaFUNYRNHujV4194eHh478x7/uLeGKy6TXnJwcPDw3sfXq8kJG13PjzLQ2c8PDy8O141MpjECsnRga0ShYeHh3fBWzuxFbCr25S31B+TCw8PDy/l/QNrxQMnvXVIHAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACrElEQVR42u3aMZIbMQwEwPv/p+XUVfZKMwBpK+iNVKsTyWZA4gD8/MTP67fn6U3+/s9xZn957MHDw8NbLP390E+TvSe12/H0q/fvn8bHw8PDu8d7OlGTz49Dv11KMlp7SeDh4eF9M6+dcrboZIvx8PDwvp+XI9sQfDYyHh4e3v/ibY7sTTZ1tvQruRY8PDy8mJcv7ns+X6nv4eHh4a2r6ptD/Ox+v0YPHh4e3g1evohiuDj8bZu02nXi4eHh3eC1y8pTrk9Lz9PBbdLhL7Pg4eHhXeNtjulZeP1+xll7VnQJ4uHh4R3i5S1Tp37bFrfaEB8PDw/vX/L2Zft8oXm6YdgWgIeHh3eBd6o5YBM0t5HwsN0KDw8P7xAvCZdb2CxcnpW4PoT1eHh4eBd4t2PRTTtXvnErKh4eHt4h3ial27YO7LdylYPBw8PDG/HaBOts0e3TrudRhIeHh3eU1wKScLkNdtvmqmJz8fDw8K7x9o0C+fTtt3nI/qHpCg8PD+8Qb1b02idwk5asWaL2QxsBHh4e3po3K0G1jFnz1mYcPDw8vHu8/PBtkW24PEvUHsi44OHh4ZW8PJzNp8lbptqMQd1qgIeHh3eZFyVDy/JY/m3bxDBsHcDDw8Nb89pm0FmC4FTaty2G4eHh4d3m5eWoTdA8C9ZnYDw8PLzbvDZ0ni2x3eJN8hcPDw/vNq9tfpqVzfKrKNmU+hbCw8PDW/Ne5bNpGkiW3l4GHy4zPDw8vAu8U+mDtsB/KkH8c+rBw8PDK3mbQHlT0MpTFfnWRMkIPDw8vEO85EDfTJwf6MeyLHh4eHhfw5ulXNtgOk92fLDg4eHhfRkvbyx4vzX52Z5vDR4eHt5tXp44yEtZCTsvdLVNYHh4eHj3eO1/9LNUbxtM59fYsb4zPDw8vM+8XxPdQQUxO/XXAAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 

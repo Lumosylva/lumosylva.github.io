@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="https://www.aboysblog.com">
+  <link rel="dns-prefetch" href="mdd1991.github.io">
   <title>Hexo + GitHub Pages搭建博客 | 马东东的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="搭建 Node.js 环境为什么要搭建 Node.js 环境？ – 因为 Hexo 博客系统是基于 Node.js 编写的 Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境，可以在非浏览器环境下，解释运行 JS 代码。 在 Node.js 官网：https://nodejs.org/en/下载最新安装包LTS版 Hexo + GitHub Pages搭建博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo + GitHub Pages搭建博客">
-<meta property="og:url" content="https://www.aboysblog.com/2018/04/06/Hexo + GitHub Pages搭建博客/index.html">
+<meta property="og:url" content="mdd1991.github.io/2018/04/06/Hexo + GitHub Pages搭建博客/index.html">
 <meta property="og:site_name" content="马东东的博客">
 <meta property="og:description" content="搭建 Node.js 环境为什么要搭建 Node.js 环境？ – 因为 Hexo 博客系统是基于 Node.js 编写的 Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境，可以在非浏览器环境下，解释运行 JS 代码。 在 Node.js 官网：https://nodejs.org/en/下载最新安装包LTS版 Hexo + GitHub Pages搭建博客">
 <meta property="og:locale" content="zh-CN">
@@ -303,7 +303,7 @@
 <p>GitHub Pages 地址解析到个人域名<br>Github Pages 是面向用户、组织和项目开放的公共静态页面搭建托管服 务，站点可以被免费托管在 Github 上，你可以选择使用 Github Pages 默 认提供的域名 github.io 或者自定义域名来发布站点。</p>
 <p>看着博客的域名是二级域名，总有一种寄人篱下的感觉，为了让这个小窝看起来更加正式，我在阿里云上买了一个域名，打算将博客绑定自己的域名。进行该绑定过程，其实就是一个重定向的过程。</p>
 <p>在 GitHub 仓库的根目录下建立一个CNAME的文本文件(注意：没有扩展名)，文件里面只能输入一个你的域名，不能加http://</p>
-<p><a href="http://www.aboysblog.com">http://www.aboysblog.com</a></p>
+<p><a href="http://www.aboysblog.com" target="_blank" rel="external">http://www.aboysblog.com</a></p>
 <p>Hexo + GitHub Pages搭建博客注意：CNAME 一定是在你 Github 项目的 master 根目录下</p>
 <p>进入阿里云域名解析地址，添加解析：</p>
 <p>记录类型选择CNAME</p>
@@ -323,7 +323,7 @@
 <p>方法二：将需要上传至github的内容放在source文件夹，例如README.md、CNAME、favicon.ico、images等，这样在 hexo d 之后就不会被删除了。</p>
 <p>注意1：每次生成的 CNAME 都是 yoursite.com 怎么解决？</p>
 <p>修改 _config.yml</p>
-<p>url: <a href="http://www.aboysblog.com">http://www.aboysblog.com</a></p>
+<p>url: <a href="http://www.aboysblog.com" target="_blank" rel="external">http://www.aboysblog.com</a></p>
 <p>root: /</p>
 <p>permalink: :year/:month/:day/:title/</p>
 <p>permalink_defaults:</p>
@@ -435,7 +435,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuElEQVR42u3aS24jMQwFwNz/0sl2AMf2e6Q08aJ6ZfijqDqAyCb59RVf3/9cj++8/vRxndffSdY/fOHh4eEttp5sN9nQs08fX5/az9O/joeHh3eNN9tQu9E2/LwOS9F+8PDw8D6A1253z17dbjw8PLwP47XvJyvne8DDw8P7W17y8N+WHtoiQlvOOFxrwcPDw+t+O0xn/+r1lf4eHh4e3rqrvmk+5Qd3m1IXu8XDw8O7wMsP3GRzScG3LQe3gQEPDw/vNm9/oLdli3blWSMNDw8P7x6vXTQv9ebfyRPo1fABHh4e3iFe28RqG1R5Gn0lzODh4eHdymCjMdNTgwX50Z+MhR3o5uHh4eEdwuzLrLMC7qxh9uY24eHh4R3lvS7jzqhtgt6WHorzHw8PD+8CLw8P+Sb2waYt1xYlXTw8PLyjvPxw36TXbSjKW2VFeMDDw8Nb8PKjPH8nL0lsShjRvwEPDw/vAm9Trm2bUm3rqx1TGI5e4eHh4R3aT15sbQ/6U2MKB4au8PDw8Ea8Vp+k1+2nyf0eJvF4eHh413j5GMEswd0Ps86CFh4eHt4NXpKk5ulvcvTnfblZEHozWYaHh4e35rWP+rMBgnwIdTOy8Ms6eHh4eNd4++JCkeCWTbL2m0+fGPDw8PAO8fKv7jtsyWqzMkfUBsPDw8O7zMtLsbOtnBqfigIJHh4e3jXeLCFuD/Th4T4qduDh4eH9T16SEJ8C5GGgHczCw8PDu8H7Lq887Z6Fk3xMIfoUDw8P7wKvPXb3yXd7s9qBrWGYwcPDwyt57aDVbDTqRrsrWhkPDw/vGm8zApW0uJIBhX0ZAg8PD+8zeXlgSN7ZjCYUxVw8PDy8j+FtCrLJam2bbTXdgIeHh1fy8qZXi2/T8faWvfktHh4e3gVe+8A/S3Bnzf72Rg8vPDw8vJT3A64O7gOn5+7VAAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuklEQVR42u3aQU7DQAwFUO5/aZDYQpJve9yC9LJCoU3yZpFxv/3xER+f38fV+Z/H1Wfyu/z8VnKF5oGHh4fXevT7B7166HvA1RXul6N6x4er4eHh4a3xktd0cvvkfH7H+wWKNjA8PDy8t/J6BW6yDeQbCR4eHt7/4uXBxCSGmD8DHh4e3mt4SRiRFM3Vo5q+LmYteHh4eJ1rFlpT7/17sb+Hh4eHN+iq56/mvICutr5GWw4eHh7eAq8aGeSh6nwQIV/EhyfHw8PDW+Ddv7LzB61GvdUQYTSagIeHh3eIV33JVl/xvZij+jyXeDw8PLwF3qmitlegzxtmhaXEw8PDW+PlwwH5DXqjCb3BgoeNAQ8PD2/My+ODU8FENSyunsfDw8N7JS+5UK/AzdtjPVJ5hfDw8PDGvDyG6LXzq4Xyse0EDw8Pb7dSLUSxvSI7WbL8W5NwBA8PD2/Cy6PVatWan6+23AoLgYeHh7fAu/9QtXitAnq9/jw+xsPDw9vgVRmnCuK8cK/GEHh4eHjbvOQ3e/XVn7fHzo4dPIxe4eHh4S3wJqHAZICg2taqLhweHh7eWV71a/kLOq9pJ3Ft4RcDHh4e3iFe3tDqDQok5yelfHkyAg8PD+8QLx+umoSw80J8NHqFh4eHd5SXt6mqL+heUd7bkB42GDw8PLwFXq9Z1St5e4208jQZHh4e3hpv0vLv3XieneRNOzw8PLw9XnWwaTQIFQ8iHDjw8PDwFmD5kYcFk6ChF9r+suh4eHh4C7ze5lEedSpuM0lp3hy6wsPDwzvEy1tcp6rWCSnfqPDw8PC2efOQ4tR/J9tMeU/Dw8PDewkvGQXYiAzyYAIPDw/v7/AmyHzYtBcTP4QReHh4eAu86mu9OoiQN9Um41/lAQI8PDy8M7/rm5FBXuZWX/H5Mh3r7+Hh4eH9/skvDpNekwI9CxEAAAAASUVORK5CYII=" alt="微信分享二维码">
     </div>
 </div>
 
