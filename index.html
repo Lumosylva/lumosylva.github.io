@@ -2,7 +2,6 @@
 <html>
 <head>
   <meta charset="utf-8">
-  
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="nilotica.github.io">
@@ -96,7 +95,7 @@
 		        
 					<a class="bilibili" target="_blank" href="/" title="bilibili"><i class="icon-bilibili"></i></a>
 		        
-					<a class="mail" target="_blank" href="mailto:xxx@xx.com" title="mail"><i class="icon-mail"></i></a>
+					<a class="mail" target="_blank" href="mailto:donnymoving@gmail.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -147,7 +146,7 @@
 			        
 						<a class="bilibili" target="_blank" href="x" title="bilibili"><i class="icon-bilibili"></i></a>
 			        
-						<a class="mail" target="_blank" href="mailto:xx@xx.com" title="mail"><i class="icon-mail"></i></a>
+						<a class="mail" target="_blank" href="mailto:donnymoving@gmail.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -374,7 +373,7 @@
 <p>GitHub Pages 地址解析到个人域名<br>Github Pages 是面向用户、组织和项目开放的公共静态页面搭建托管服 务，站点可以被免费托管在 Github 上，你可以选择使用 Github Pages 默 认提供的域名 github.io 或者自定义域名来发布站点。</p>
 <p>看着博客的域名是二级域名，总有一种寄人篱下的感觉，为了让这个小窝看起来更加正式，我在阿里云上买了一个域名，打算将博客绑定自己的域名。进行该绑定过程，其实就是一个重定向的过程。</p>
 <p>在 GitHub 仓库的根目录下建立一个CNAME的文本文件(注意：没有扩展名)，文件里面只能输入一个你的域名，不能加http://</p>
-<p><a href="http://www.aboysblog.com" target="_blank" rel="external">http://www.aboysblog.com</a></p>
+<p>http://www.example.com</p>
 <p>Hexo + GitHub Pages搭建博客注意：CNAME 一定是在你 Github 项目的 master 根目录下</p>
 <p>进入阿里云域名解析地址，添加解析：</p>
 <p>记录类型选择CNAME</p>
@@ -388,13 +387,13 @@
 <p>记录值填你GitHub 的ip地址（在cmd中ping：）</p>
 <p>ping nilotica.github.com<br>Hexo + GitHub Pages搭建博客</p>
 <p>点击保存，等 1 分钟，访问下你自己的域名，一切就ok了。</p>
-<p>域名绑定成功，域名解析成功，因此你在浏览中输入<a href="http://www.aboysblog.com，或" target="_blank" rel="external">http://www.aboysblog.com，或</a> aboysblog.com 就可以访问到博客了，输入 nilotica.github.io 会重定向到<a href="http://www.aboysblog.com。过程：www" target="_blank" rel="external">http://www.aboysblog.com。过程：www</a> 的方式，会先解析成<a href="http://xxxx.github.io，然后根据" target="_blank" rel="external">http://xxxx.github.io，然后根据</a> CNAME 再变成 www</p>
+<p>域名绑定成功，域名解析成功，因此你在浏览中输入http://www.example.com，或</a> example.com 就可以访问到博客了，输入 nilotica.github.io 会重定向到http://www.example.com。过程：www</a> 的方式，会先解析成<a href="http://xxxx.github.io，然后根据" target="_blank" rel="external">http://xxxx.github.io，然后根据</a> CNAME 再变成 www</p>
 <p>注意：CNAME文件在下次hexo deploy的时候就消失了，需要重新创建，这样就很繁琐</p>
 <p>方法一：在hexo g之后，hexo d之前，把CNAME文件复制到 “\public” 目录下面，里面写入你要绑定的域名。</p>
 <p>方法二：将需要上传至github的内容放在source文件夹，例如README.md、CNAME、favicon.ico、images等，这样在 hexo d 之后就不会被删除了。</p>
 <p>注意1：每次生成的 CNAME 都是 yoursite.com 怎么解决？</p>
 <p>修改 _config.yml</p>
-<p>url: <a href="http://www.aboysblog.com" target="_blank" rel="external">http://www.aboysblog.com</a></p>
+<p>url: http://www.example.com</p>
 <p>root: /</p>
 <p>permalink: :year/:month/:day/:title/</p>
 <p>permalink_defaults:</p>
@@ -637,11 +636,7 @@ MathJax.Hub.Queue(function() {
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="https://www.madongdong.me/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Donny的另一博客站</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="https://www.cnblogs.com/ma-dongdong/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>博客园</a>
+              <a href="https://www.cnblogs.com/ma-dongdong/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>博客园博客</a>
             </li>
           
         </ul>
