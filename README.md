@@ -25,4 +25,4 @@ Build by Hexo.
 
 **交易方式(Transaction)**: 
 
-- 此域名在阿里云域名市场正在出售，欲购买可点击此链接(This domain name is currently for sale on the Alibaba Cloud Domain Market. To purchase, please click on this link) [https://mi.aliyun.com](https://mi.aliyun.com)
+- 此域名在阿里云域名市场正在出售，欲购买可点击此链接(This domain name is currently for sale on the Alibaba Cloud Domain Market. To purchase, please click on this link) [https://mi.aliyun.com](https://mi.aliyun.com/domain-detail?domainName=huayutouzi.com&_v_=47edc66742fe36fc0a839ea5700b8cd5)
